@@ -1,0 +1,57 @@
+.explore {
+  padding: 20px;
+}
+
+.suggestions-section {
+  margin-top: 20px;
+}
+
+.suggestions-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.suggestions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.suggestion-card {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: scale(1.02);
+  background-color: #eef2f6;
+}
+
+.suggestion-card p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.suggestion-card h3 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.add-to-watchlist-btn {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-watchlist-btn:hover {
+  background-color: #45a049;
+}

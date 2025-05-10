@@ -1,0 +1,103 @@
+
+.watchlist-section {
+  position: fixed;
+  top: 80px; 
+  right: 0;
+  width: 250px;
+  height: calc(100% - 80px); 
+  background-color: #ffffff;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  padding-bottom: 20px;
+  border-radius: 10px 0 0 10px;
+  overflow-y: auto; 
+  z-index: 10;
+  transition: transform 0.3s ease-in-out;
+}
+
+
+.watchlist-section h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Watchlist Items */
+.watchlist {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 100%; /* Ensure watchlist doesn’t push the height of the section */
+}
+
+.watchlist-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.watchlist-item:hover {
+  transform: scale(1.02);
+  background-color: #eef2f6;
+}
+
+.watchlist-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  text-transform: uppercase;
+}
+
+.remove-btn {
+  background-color: #db4437;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+  background-color: #c1351d;
+}
+
+/* Empty Watchlist */
+.watchlist-empty {
+  text-align: center;
+  font-size: 16px;
+  color: #aaa;
+  padding-top: 30px;
+  font-style: italic;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .watchlist-section {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: unset;
+    left: 0;
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  .watchlist-item {
+    padding: 12px 15px;
+  }
+}
